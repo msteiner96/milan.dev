@@ -414,7 +414,7 @@ export default function Skills() {
             className="mt-12 text-center"
           >
             <p className="text-lg text-gray-400 italic">
-              "Constantly evolving with the tech landscape"
+              &ldquo;Constantly evolving with the tech landscape&rdquo;
             </p>
           </motion.div>
         </motion.div>

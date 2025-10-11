@@ -134,8 +134,8 @@ export default function About() {
                 className="relative pl-6 border-l-2 border-blue-500/50"
               >
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  I'm a <span className="text-blue-400 font-bold">Senior Frontend Engineer</span> with a passion
-                  for building innovative decentralized applications that push the boundaries of what's possible
+                  I&apos;m a <span className="text-blue-400 font-bold">Senior Frontend Engineer</span> with a passion
+                  for building innovative decentralized applications that push the boundaries of what&apos;s possible
                   with blockchain technology.
                 </p>
               </motion.div>
@@ -160,7 +160,7 @@ export default function About() {
                 className="relative pl-6 border-l-2 border-cyan-500/50"
               >
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  I'm a proud <span className="text-cyan-400 font-bold">HackAtom Winner</span> with WYND DAO and an
+                  I&apos;m a proud <span className="text-cyan-400 font-bold">HackAtom Winner</span> with WYND DAO and an
                   active contributor to the Cosmos ecosystem, particularly <span className="font-bold text-white">CosmJS</span> and{' '}
                   <span className="font-bold text-white">CosmWasmJS</span> - the essential tools that power JavaScript interactions
                   with Cosmos-based blockchains.
@@ -174,8 +174,8 @@ export default function About() {
                 className="p-6 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-cyan-500/10 border border-white/10 rounded-2xl backdrop-blur-sm"
               >
                 <p className="text-lg text-gray-200 leading-relaxed italic">
-                  "I believe in leveraging the power of decentralized technologies to build secure, scalable, and user-friendly
-                  applications that make blockchain accessible to everyone."
+                  &ldquo;I believe in leveraging the power of decentralized technologies to build secure, scalable, and user-friendly
+                  applications that make blockchain accessible to everyone.&rdquo;
                 </p>
               </motion.div>
             </div>

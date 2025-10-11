@@ -70,7 +70,7 @@ export default function Contact() {
             className="inline-block mb-4"
           >
             <div className="px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium backdrop-blur-sm">
-              Let's Work Together
+              Let&apos;s Work Together
             </div>
           </motion.div>
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-6">
@@ -87,7 +87,7 @@ export default function Contact() {
             <div className="h-px bg-gradient-to-r from-purple-500 via-blue-500 to-transparent w-24" />
           </motion.div>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Ready to collaborate? Reach out and let's create something amazing together
+            Ready to collaborate? Reach out and let&apos;s create something amazing together
           </p>
         </motion.div>
 
