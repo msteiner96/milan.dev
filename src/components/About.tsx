@@ -19,10 +19,10 @@ export default function About() {
     },
     {
       icon: Briefcase,
-      label: 'Projects Completed',
-      value: '50+',
+      label: 'Teams Led',
+      value: '10+',
       color: 'from-purple-500 to-pink-500',
-      description: 'From startups to enterprise'
+      description: 'Managing cross-functional development teams'
     },
     {
       icon: Globe,
@@ -44,6 +44,7 @@ export default function About() {
     { icon: Zap, text: 'React & Vue.js Expert', color: 'text-blue-400' },
     { icon: Rocket, text: 'Blockchain Specialist', color: 'text-purple-400' },
     { icon: Sparkles, text: 'Web3 Pioneer', color: 'text-cyan-400' },
+    { icon: Briefcase, text: 'Team Leader', color: 'text-orange-400' },
   ];
 
   return (
@@ -148,8 +149,9 @@ export default function About() {
               >
                 <p className="text-lg text-gray-300 leading-relaxed">
                   As creator of <span className="text-purple-400 font-bold">Phoenix Hub</span>, I lead development
-                  efforts in creating cutting-edge dApps and web applications. My expertise spans across modern frontend
-                  frameworks, blockchain protocols, and smart contract development.
+                  teams in creating cutting-edge dApps and web applications. With extensive experience in{' '}
+                  <span className="text-orange-400 font-bold">team leadership and project management</span>, I've
+                  successfully guided cross-functional teams through complex blockchain implementations.
                 </p>
               </motion.div>
 

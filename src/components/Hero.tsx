@@ -250,8 +250,9 @@ export default function Hero() {
           className="text-base sm:text-lg lg:text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
         >
           Building the decentralized future, one dApp at a time.
-          Creator of <span className="text-orange-400 font-semibold">Phoenix Hub</span> and
-          <span className="text-pink-400 font-semibold"> HackAtom Winner</span>.
+          Creator of <span className="text-orange-400 font-semibold">Phoenix Hub</span>,
+          <span className="text-pink-400 font-semibold"> HackAtom Winner</span>, and
+          <span className="text-purple-400 font-semibold"> experienced team leader</span>.
         </motion.p>
 
         {/* Social Links */}
