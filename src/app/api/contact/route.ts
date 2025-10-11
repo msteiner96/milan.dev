@@ -25,15 +25,29 @@ export async function POST(request: NextRequest) {
     }
 
     const captchaVerification = await fetch(
-      `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${captchaToken}`,
+      'https://www.google.com/recaptcha/api/siteverify',
       {
         method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${captchaToken}`,
       }
     );
 
+    if (!captchaVerification.ok) {
+      console.error('reCAPTCHA verification request failed:', captchaVerification.status);
+      return NextResponse.json(
+        { error: 'Captcha verification request failed' },
+        { status: 500 }
+      );
+    }
+
     const captchaResult = await captchaVerification.json();
+    console.log('reCAPTCHA result:', captchaResult);
 
     if (!captchaResult.success) {
+      console.error('reCAPTCHA validation failed:', captchaResult['error-codes']);
       return NextResponse.json(
         { error: 'Captcha verification failed' },
         { status: 400 }

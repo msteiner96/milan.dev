@@ -27,7 +27,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold gradient-text mb-4">milan.dev</h3>
+            <h3 className="text-2xl font-bold gradient-text mb-4">milancodes.dev</h3>
             <p className="text-gray-400 mb-4">
               Senior Frontend Engineer & Blockchain Architect building the decentralized future.
             </p>
@@ -46,7 +46,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-blue-400 transition-colors inline-block"
+                    className="text-gray-400 hover:text-orange-400 transition-colors inline-block"
                   >
                     {link.name}
                   </a>
@@ -65,7 +65,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-white/5 hover:bg-white/10 rounded-lg transition-all border border-white/10 hover:border-blue-500/50"
+                  className="p-3 bg-white/5 hover:bg-white/10 rounded-lg transition-all border border-white/10 hover:border-orange-500/50"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   aria-label={social.label}
@@ -80,11 +80,11 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-gray-400 text-sm text-center sm:text-left">
-            © {new Date().getFullYear()} milan.dev. All rights reserved.
+            © {new Date().getFullYear()} milancodes.dev. All rights reserved.
           </p>
           <motion.button
             onClick={scrollToTop}
-            className="p-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all"
+            className="p-2 bg-gradient-to-r from-orange-600 to-pink-600 rounded-lg hover:from-orange-700 hover:to-pink-700 transition-all"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             aria-label="Scroll to top"

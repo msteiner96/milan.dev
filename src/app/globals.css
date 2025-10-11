@@ -42,9 +42,9 @@ body {
   background: #555;
 }
 
-/* Gradient text utility */
+/* Gradient text utility - New vibrant scheme */
 .gradient-text {
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #06b6d4 100%);
+  background: linear-gradient(135deg, #f97316 0%, #ec4899 50%, #8b5cf6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

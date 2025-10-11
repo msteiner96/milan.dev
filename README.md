@@ -1,4 +1,4 @@
-# milan.dev - Personal Portfolio
+# milancodes.dev - Personal Portfolio
 
 A modern, animated portfolio website showcasing my work as a Senior Frontend Engineer and Blockchain Specialist.
 
@@ -69,8 +69,8 @@ A modern, animated portfolio website showcasing my work as a Senior Frontend Eng
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/msteiner96/milan.dev.git
-   cd milan.dev
+   git clone https://github.com/msteiner96/milancodes.dev.git
+   cd milancodes.dev
    ```
 
 2. **Install dependencies:**
@@ -99,7 +99,7 @@ npm start
 ## 📁 Project Structure
 
 ```
-milan.dev/
+milancodes.dev/
 ├── src/
 │   ├── app/                    # Next.js App Router
 │   │   ├── layout.tsx         # Root layout with metadata
@@ -242,7 +242,7 @@ export const metadata: Metadata = {
 If you need environment variables, create a `.env.local` file:
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://milan.dev
+NEXT_PUBLIC_SITE_URL=https://milancodes.dev
 # Add other environment variables as needed
 ```
 
@@ -262,7 +262,7 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 👤 Author
 
 **Milan**
-- Portfolio: [milan.dev](https://milan.dev)
+- Portfolio: [milancodes.dev](https://milancodes.dev)
 - GitHub: [@msteiner96](https://github.com/msteiner96)
 - Email: milan@moonbite.space
 - Telegram: [@milan_cosmos](https://t.me/milan_cosmos)

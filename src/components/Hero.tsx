@@ -61,9 +61,9 @@ export default function Hero() {
           className="absolute inset-0 opacity-60"
           animate={{
             background: [
-              'radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 40% 20%, rgba(6, 182, 212, 0.2) 0%, transparent 50%)',
-              'radial-gradient(circle at 80% 50%, rgba(59, 130, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 60% 20%, rgba(6, 182, 212, 0.2) 0%, transparent 50%)',
-              'radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 40% 20%, rgba(6, 182, 212, 0.2) 0%, transparent 50%)',
+              'radial-gradient(circle at 20% 50%, rgba(249, 115, 22, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(236, 72, 153, 0.3) 0%, transparent 50%), radial-gradient(circle at 40% 20%, rgba(139, 92, 246, 0.2) 0%, transparent 50%)',
+              'radial-gradient(circle at 80% 50%, rgba(249, 115, 22, 0.3) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(236, 72, 153, 0.3) 0%, transparent 50%), radial-gradient(circle at 60% 20%, rgba(139, 92, 246, 0.2) 0%, transparent 50%)',
+              'radial-gradient(circle at 20% 50%, rgba(249, 115, 22, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(236, 72, 153, 0.3) 0%, transparent 50%), radial-gradient(circle at 40% 20%, rgba(139, 92, 246, 0.2) 0%, transparent 50%)',
             ],
           }}
           transition={{
@@ -77,8 +77,8 @@ export default function Hero() {
         <div
           className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: `linear-gradient(rgba(59, 130, 246, 0.15) 1px, transparent 1px),
-                             linear-gradient(90deg, rgba(59, 130, 246, 0.15) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(249, 115, 22, 0.15) 1px, transparent 1px),
+                             linear-gradient(90deg, rgba(249, 115, 22, 0.15) 1px, transparent 1px)`,
             backgroundSize: '80px 80px',
             maskImage: 'radial-gradient(ellipse 100% 60% at 50% 50%, black 0%, transparent 100%)',
           }}
@@ -96,7 +96,7 @@ export default function Hero() {
                 width: 300,
                 height: 300,
                 background: `radial-gradient(circle, ${
-                  ['rgba(59, 130, 246, 0.15)', 'rgba(139, 92, 246, 0.15)', 'rgba(6, 182, 212, 0.15)'][i % 3]
+                  ['rgba(249, 115, 22, 0.15)', 'rgba(236, 72, 153, 0.15)', 'rgba(139, 92, 246, 0.15)'][i % 3]
                 } 0%, transparent 70%)`,
               }}
               initial={{ x: startX, y: startY }}
@@ -120,7 +120,7 @@ export default function Hero() {
           return (
             <motion.div
               key={`particle-${i}`}
-              className="absolute w-1 h-1 bg-blue-400/40 rounded-full"
+              className="absolute w-1 h-1 bg-orange-400/40 rounded-full"
               initial={{ x: startX, y: startY }}
               animate={{
                 y: [startY, startY - 100, startY + 50, startY],
@@ -145,7 +145,7 @@ export default function Hero() {
             top: mousePosition.y - 192,
           }}
           style={{
-            background: 'radial-gradient(circle, rgba(59, 130, 246, 0.4) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(249, 115, 22, 0.4) 0%, transparent 70%)',
           }}
           transition={{ type: 'spring', damping: 40, stiffness: 50, mass: 0.5 }}
         />
@@ -167,7 +167,7 @@ export default function Hero() {
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
           >
-            <Sparkles className="text-blue-400" size={20} />
+            <Sparkles className="text-orange-400" size={20} />
           </motion.div>
           <span className="text-sm sm:text-base text-gray-400 font-mono tracking-wider uppercase">
             Available for Work
@@ -176,7 +176,7 @@ export default function Hero() {
             animate={{ rotate: -360 }}
             transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
           >
-            <Sparkles className="text-purple-400" size={20} />
+            <Sparkles className="text-pink-400" size={20} />
           </motion.div>
         </motion.div>
 
@@ -202,12 +202,12 @@ export default function Hero() {
           className="flex items-center justify-center gap-2 mb-8"
         >
           <motion.div
-            className="h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent w-16 sm:w-24"
+            className="h-px bg-gradient-to-r from-transparent via-orange-500 to-transparent w-16 sm:w-24"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ delay: 1, duration: 1 }}
           />
-          <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
+          <div className="w-2 h-2 rounded-full bg-pink-500 animate-pulse" />
           <motion.div
             className="h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent w-16 sm:w-24"
             initial={{ scaleX: 0 }}
@@ -225,20 +225,20 @@ export default function Hero() {
           </h2>
           <div className="flex items-center justify-center gap-3 flex-wrap">
             <motion.span
-              className="px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm sm:text-base font-medium backdrop-blur-sm"
-              whileHover={{ scale: 1.05, borderColor: 'rgba(59, 130, 246, 0.4)' }}
+              className="px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full text-orange-400 text-sm sm:text-base font-medium backdrop-blur-sm"
+              whileHover={{ scale: 1.05, borderColor: 'rgba(249, 115, 22, 0.4)' }}
             >
               Blockchain Architect
             </motion.span>
             <motion.span
-              className="px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm sm:text-base font-medium backdrop-blur-sm"
-              whileHover={{ scale: 1.05, borderColor: 'rgba(139, 92, 246, 0.4)' }}
+              className="px-4 py-2 bg-pink-500/10 border border-pink-500/20 rounded-full text-pink-400 text-sm sm:text-base font-medium backdrop-blur-sm"
+              whileHover={{ scale: 1.05, borderColor: 'rgba(236, 72, 153, 0.4)' }}
             >
               dApp Specialist
             </motion.span>
             <motion.span
-              className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm sm:text-base font-medium backdrop-blur-sm"
-              whileHover={{ scale: 1.05, borderColor: 'rgba(6, 182, 212, 0.4)' }}
+              className="px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm sm:text-base font-medium backdrop-blur-sm"
+              whileHover={{ scale: 1.05, borderColor: 'rgba(139, 92, 246, 0.4)' }}
             >
               Web3 Expert
             </motion.span>
@@ -250,8 +250,8 @@ export default function Hero() {
           className="text-base sm:text-lg lg:text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
         >
           Building the decentralized future, one dApp at a time.
-          Creator of <span className="text-blue-400 font-semibold">Phoenix Hub</span> and
-          <span className="text-purple-400 font-semibold"> HackAtom Winner</span>.
+          Creator of <span className="text-orange-400 font-semibold">Phoenix Hub</span> and
+          <span className="text-pink-400 font-semibold"> HackAtom Winner</span>.
         </motion.p>
 
         {/* Social Links */}
@@ -268,7 +268,7 @@ export default function Hero() {
             whileTap={{ scale: 0.95 }}
             aria-label="GitHub"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-0 bg-gradient-to-r from-orange-600/20 to-pink-600/20 opacity-0 group-hover:opacity-100 transition-opacity" />
             <Github size={24} className="relative z-10" />
           </motion.a>
           <motion.a
@@ -278,7 +278,7 @@ export default function Hero() {
             whileTap={{ scale: 0.95 }}
             aria-label="Email"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity" />
             <Mail size={24} className="relative z-10" />
           </motion.a>
         </motion.div>
@@ -290,12 +290,12 @@ export default function Hero() {
         >
           <motion.a
             href="#projects"
-            className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 rounded-full text-white font-bold transition-all overflow-hidden shadow-2xl shadow-blue-500/30"
+            className="group relative px-8 py-4 bg-gradient-to-r from-orange-600 via-pink-600 to-purple-600 rounded-full text-white font-bold transition-all overflow-hidden shadow-2xl shadow-orange-500/30"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600"
+              className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600"
               initial={{ x: '100%' }}
               whileHover={{ x: '0%' }}
               transition={{ duration: 0.3 }}

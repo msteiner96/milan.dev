@@ -56,7 +56,7 @@ export default function Projects() {
     {
       title: "CosmWasmJS",
       description:
-        "Contributions to CosmWasmJS, the essential SDK for building client applications that interact with CosmWasm-enabled blockchains. Empowering smart contract interactions.",
+        "Original author of CosmWasmJS, the essential SDK for building client applications that interact with CosmWasm-enabled blockchains. Empowering smart contract interactions.",
       image: "/projects/cosmwasmjs.jpg",
       tags: ["TypeScript", "Smart Contracts", "CosmWasm", "SDK", "Web3"],
       links: {
@@ -68,6 +68,7 @@ export default function Projects() {
         value: "50+",
       },
       gradient: "from-green-500 via-emerald-500 to-cyan-500",
+      archived: true,
     },
   ];
 
@@ -393,9 +394,16 @@ export default function Projects() {
 
                 {/* Content */}
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all">
-                    {project.title}
-                  </h3>
+                  <div className="flex items-center gap-3 mb-3">
+                    <h3 className="text-2xl font-bold group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all">
+                      {project.title}
+                    </h3>
+                    {project.archived && (
+                      <span className="px-2.5 py-1 text-xs font-semibold bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 rounded-full backdrop-blur-sm">
+                        Archived
+                      </span>
+                    )}
+                  </div>
 
                   <p className="text-gray-400 mb-6 leading-relaxed line-clamp-3">
                     {project.description}
