@@ -53,7 +53,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pb-16 sm:pb-0">
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
         {/* Animated Gradient Mesh */}
