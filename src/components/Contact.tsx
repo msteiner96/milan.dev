@@ -97,7 +97,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden" ref={ref}>
+    <section id="contact" className="relative pt-24 sm:pt-32 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden" ref={ref}>
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-blue-950/5 to-black" />
       <motion.div

@@ -161,7 +161,7 @@ export default function Hero() {
         {/* Decorative Elements */}
         <motion.div
           variants={itemVariants}
-          className="flex items-center justify-center gap-2 mb-12"
+          className="flex items-center justify-center gap-2 mb-12 mt-16 sm:mt-0"
         >
           <motion.div
             animate={{ rotate: 360 }}

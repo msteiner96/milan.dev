@@ -232,7 +232,7 @@ export default function About() {
                   </motion.div>
 
                   {/* Value */}
-                  <div className="text-4xl font-black mb-2 gradient-text">
+                  <div className="text-2xl sm:text-4xl font-black mb-2 gradient-text">
                     {stat.value}
                   </div>
 
