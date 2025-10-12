@@ -1,54 +1,66 @@
-'use client';
+"use client";
 
-import { motion, useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
-import { Award, Briefcase, Code2, Globe, Sparkles, Zap, Rocket } from 'lucide-react';
+import { motion, useInView } from "framer-motion";
+import { useRef, useState } from "react";
+import {
+  Award,
+  Briefcase,
+  Code2,
+  Globe,
+  Sparkles,
+  Zap,
+  Rocket,
+} from "lucide-react";
 
 export default function About() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [hoveredStat, setHoveredStat] = useState<number | null>(null);
 
   const stats = [
     {
       icon: Code2,
-      label: 'Years Experience',
-      value: '5+',
-      color: 'from-blue-500 to-cyan-500',
-      description: 'Building exceptional web experiences'
+      label: "Years Experience",
+      value: "5+",
+      color: "from-blue-500 to-cyan-500",
+      description: "Building exceptional web experiences",
     },
     {
       icon: Briefcase,
-      label: 'Teams Led',
-      value: '10+',
-      color: 'from-purple-500 to-pink-500',
-      description: 'Managing cross-functional development teams'
+      label: "Teams Led",
+      value: "10+",
+      color: "from-purple-500 to-pink-500",
+      description: "Managing cross-functional development teams",
     },
     {
       icon: Globe,
-      label: 'Open Source',
-      value: 'Active',
-      color: 'from-green-500 to-emerald-500',
-      description: 'Contributing to Cosmos ecosystem'
+      label: "Open Source",
+      value: "Active",
+      color: "from-green-500 to-emerald-500",
+      description: "Contributing to Cosmos ecosystem",
     },
     {
       icon: Award,
-      label: 'HackAtom',
-      value: 'Winner',
-      color: 'from-yellow-500 to-orange-500',
-      description: 'Award-winning blockchain solutions'
+      label: "HackAtom",
+      value: "Winner",
+      color: "from-yellow-500 to-orange-500",
+      description: "Award-winning blockchain solutions",
     },
   ];
 
   const highlights = [
-    { icon: Zap, text: 'React & Vue.js Expert', color: 'text-blue-400' },
-    { icon: Rocket, text: 'Blockchain Specialist', color: 'text-purple-400' },
-    { icon: Sparkles, text: 'Web3 Pioneer', color: 'text-cyan-400' },
-    { icon: Briefcase, text: 'Team Leader', color: 'text-orange-400' },
+    { icon: Zap, text: "React & Vue.js Expert", color: "text-blue-400" },
+    { icon: Rocket, text: "Blockchain Specialist", color: "text-purple-400" },
+    { icon: Sparkles, text: "Web3 Pioneer", color: "text-cyan-400" },
+    { icon: Briefcase, text: "Team Leader", color: "text-orange-400" },
   ];
 
   return (
-    <section id="about" className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden" ref={ref}>
+    <section
+      id="about"
+      className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      ref={ref}
+    >
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-blue-950/10 to-black" />
       <motion.div
@@ -79,7 +91,7 @@ export default function About() {
           <motion.div
             initial={{ scale: 0 }}
             animate={isInView ? { scale: 1 } : {}}
-            transition={{ duration: 0.5, type: 'spring' }}
+            transition={{ duration: 0.5, type: "spring" }}
             className="inline-block mb-4"
           >
             <div className="px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium backdrop-blur-sm">
@@ -120,8 +132,13 @@ export default function About() {
                   className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full backdrop-blur-sm hover:border-white/20 transition-all group"
                   whileHover={{ scale: 1.05 }}
                 >
-                  <highlight.icon className={`${highlight.color} group-hover:scale-110 transition-transform`} size={16} />
-                  <span className="text-sm font-medium text-gray-300">{highlight.text}</span>
+                  <highlight.icon
+                    className={`${highlight.color} group-hover:scale-110 transition-transform`}
+                    size={16}
+                  />
+                  <span className="text-sm font-medium text-gray-300">
+                    {highlight.text}
+                  </span>
                 </motion.div>
               ))}
             </div>
@@ -135,8 +152,12 @@ export default function About() {
                 className="relative pl-6 border-l-2 border-blue-500/50"
               >
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  I&apos;m a <span className="text-blue-400 font-bold">Senior Frontend Engineer</span> with a passion
-                  for building innovative decentralized applications that push the boundaries of what&apos;s possible
+                  I&apos;m a{" "}
+                  <span className="text-blue-400 font-bold">
+                    Senior Frontend Engineer
+                  </span>{" "}
+                  with a passion for building innovative decentralized
+                  applications that push the boundaries of what&apos;s possible
                   with blockchain technology.
                 </p>
               </motion.div>
@@ -148,10 +169,15 @@ export default function About() {
                 className="relative pl-6 border-l-2 border-purple-500/50"
               >
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  As creator of <span className="text-purple-400 font-bold">Phoenix Hub</span>, I lead development
-                  teams in creating cutting-edge dApps and web applications. With extensive experience in{' '}
-                  <span className="text-orange-400 font-bold">team leadership and project management</span>, I've
-                  successfully guided cross-functional teams through complex blockchain implementations.
+                  As creator of{" "}
+                  <span className="text-purple-400 font-bold">Phoenix Hub</span>
+                  , I lead development teams in creating cutting-edge dApps and
+                  web applications. With extensive experience in{" "}
+                  <span className="text-orange-400 font-bold">
+                    team leadership and project management
+                  </span>
+                  , I{"'"}ve successfully guided cross-functional teams through
+                  complex blockchain implementations.
                 </p>
               </motion.div>
 
@@ -162,10 +188,16 @@ export default function About() {
                 className="relative pl-6 border-l-2 border-cyan-500/50"
               >
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  I&apos;m a proud <span className="text-cyan-400 font-bold">HackAtom Winner</span> with WYND DAO and an
-                  active contributor to the Cosmos ecosystem, particularly <span className="font-bold text-white">CosmJS</span> and{' '}
-                  <span className="font-bold text-white">CosmWasmJS</span> - the essential tools that power JavaScript interactions
-                  with Cosmos-based blockchains.
+                  I&apos;m a proud{" "}
+                  <span className="text-cyan-400 font-bold">
+                    HackAtom Winner
+                  </span>{" "}
+                  with WYND DAO and an active contributor to the Cosmos
+                  ecosystem, particularly{" "}
+                  <span className="font-bold text-white">CosmJS</span> and{" "}
+                  <span className="font-bold text-white">CosmWasmJS</span> - the
+                  essential tools that power JavaScript interactions with
+                  Cosmos-based blockchains.
                 </p>
               </motion.div>
 
@@ -176,8 +208,10 @@ export default function About() {
                 className="p-6 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-cyan-500/10 border border-white/10 rounded-2xl backdrop-blur-sm"
               >
                 <p className="text-lg text-gray-200 leading-relaxed italic">
-                  &ldquo;I believe in leveraging the power of decentralized technologies to build secure, scalable, and user-friendly
-                  applications that make blockchain accessible to everyone.&rdquo;
+                  &ldquo;I believe in leveraging the power of decentralized
+                  technologies to build secure, scalable, and user-friendly
+                  applications that make blockchain accessible to
+                  everyone.&rdquo;
                 </p>
               </motion.div>
             </div>
@@ -198,7 +232,7 @@ export default function About() {
                 transition={{
                   duration: 0.6,
                   delay: 0.6 + index * 0.1,
-                  type: 'spring',
+                  type: "spring",
                   stiffness: 100,
                 }}
                 onHoverStart={() => setHoveredStat(index)}
@@ -248,7 +282,7 @@ export default function About() {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{
                       opacity: hoveredStat === index ? 1 : 0,
-                      height: hoveredStat === index ? 'auto' : 0,
+                      height: hoveredStat === index ? "auto" : 0,
                     }}
                     className="text-xs text-gray-400 overflow-hidden"
                   >
