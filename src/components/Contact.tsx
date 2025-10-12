@@ -83,7 +83,7 @@ export default function Contact() {
       label: 'Telegram',
       value: '@milan_cosmos',
       link: 'https://t.me/milan_cosmos',
-      gradient: 'from-blue-400 to-blue-600',
+      gradient: 'from-orange-500 to-pink-500',
       description: 'Quick responses & updates',
     },
     {
@@ -91,7 +91,7 @@ export default function Contact() {
       label: 'Discord',
       value: 'milan_cosmos',
       link: 'https://discord.com/users/milan_cosmos',
-      gradient: 'from-indigo-500 to-purple-600',
+      gradient: 'from-pink-500 to-purple-500',
       description: 'Community & collaboration',
     },
   ];
@@ -99,9 +99,9 @@ export default function Contact() {
   return (
     <section id="contact" className="relative pt-24 sm:pt-32 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden" ref={ref}>
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-blue-950/5 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-orange-950/5 to-black" />
       <motion.div
-        className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
+        className="absolute top-1/4 right-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl"
         animate={{
           scale: [1, 1.3, 1],
           opacity: [0.3, 0.5, 0.3],
@@ -109,7 +109,7 @@ export default function Contact() {
         transition={{ duration: 10, repeat: Infinity }}
       />
       <motion.div
-        className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"
+        className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
         animate={{
           scale: [1.3, 1, 1.3],
           opacity: [0.5, 0.3, 0.5],
@@ -131,7 +131,7 @@ export default function Contact() {
             transition={{ duration: 0.5, type: 'spring' }}
             className="inline-block mb-4"
           >
-            <div className="px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium backdrop-blur-sm">
+            <div className="px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full text-orange-400 text-sm font-medium backdrop-blur-sm">
               Let&apos;s Work Together
             </div>
           </motion.div>
@@ -144,9 +144,9 @@ export default function Contact() {
             animate={isInView ? { scaleX: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="h-px bg-gradient-to-r from-transparent via-blue-500 to-purple-500 w-24" />
-            <Sparkles className="text-blue-400" size={24} />
-            <div className="h-px bg-gradient-to-r from-purple-500 via-blue-500 to-transparent w-24" />
+            <div className="h-px bg-gradient-to-r from-transparent via-orange-500 to-pink-500 w-24" />
+            <Sparkles className="text-orange-400" size={24} />
+            <div className="h-px bg-gradient-to-r from-pink-500 via-purple-500 to-transparent w-24" />
           </motion.div>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Ready to collaborate? Send me a message and let&apos;s create something amazing together
@@ -376,7 +376,7 @@ export default function Contact() {
                     transition={{ duration: 0.6, delay: 0.5 }}
                   >
                     <label htmlFor="name" className="flex items-center gap-2 text-sm font-semibold text-gray-300 mb-3">
-                      <User size={16} className="text-blue-400" />
+                      <User size={16} className="text-orange-400" />
                       Your Name
                     </label>
                     <input
@@ -386,7 +386,7 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-5 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                      className="w-full px-5 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500/50 focus:ring-2 focus:ring-orange-500/20 transition-all"
                       placeholder="John Doe"
                     />
                   </motion.div>
@@ -398,7 +398,7 @@ export default function Contact() {
                     transition={{ duration: 0.6, delay: 0.6 }}
                   >
                     <label htmlFor="email" className="flex items-center gap-2 text-sm font-semibold text-gray-300 mb-3">
-                      <Mail size={16} className="text-purple-400" />
+                      <Mail size={16} className="text-pink-400" />
                       Your Email
                     </label>
                     <input
@@ -408,7 +408,7 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-5 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all"
+                      className="w-full px-5 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-pink-500/50 focus:ring-2 focus:ring-pink-500/20 transition-all"
                       placeholder="john@example.com"
                     />
                   </motion.div>
@@ -420,7 +420,7 @@ export default function Contact() {
                     transition={{ duration: 0.6, delay: 0.7 }}
                   >
                     <label htmlFor="message" className="flex items-center gap-2 text-sm font-semibold text-gray-300 mb-3">
-                      <MessageSquare size={16} className="text-cyan-400" />
+                      <MessageSquare size={16} className="text-purple-400" />
                       Your Message
                     </label>
                     <textarea
@@ -430,7 +430,7 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full px-5 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all resize-none"
+                      className="w-full px-5 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all resize-none"
                       placeholder="Tell me about your project..."
                     />
                   </motion.div>
@@ -481,7 +481,7 @@ export default function Contact() {
                     <motion.button
                       type="submit"
                       disabled={status === 'loading'}
-                      className={`group w-full px-8 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 hover:opacity-90 rounded-xl text-white font-bold transition-all shadow-lg shadow-blue-500/30 flex items-center justify-center gap-3 ${
+                      className={`group w-full px-8 py-4 bg-gradient-to-r from-orange-600 via-pink-600 to-purple-600 hover:opacity-90 rounded-xl text-white font-bold transition-all shadow-lg shadow-orange-500/30 flex items-center justify-center gap-3 ${
                         status === 'loading' ? 'opacity-70 cursor-not-allowed' : ''
                       }`}
                       whileHover={status !== 'loading' ? { scale: 1.02, y: -2 } : {}}
@@ -504,7 +504,7 @@ export default function Contact() {
               </div>
 
               {/* Glow effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 opacity-0 hover:opacity-10 blur-xl -z-10 rounded-3xl transition-opacity" />
+              <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500 opacity-0 hover:opacity-10 blur-xl -z-10 rounded-3xl transition-opacity" />
             </div>
           </motion.div>
         </div>

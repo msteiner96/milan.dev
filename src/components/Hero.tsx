@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ChevronDown, Github, Mail, Sparkles } from 'lucide-react';
+import { ChevronDown, Github, Mail } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 export default function Hero() {
@@ -158,44 +158,105 @@ export default function Hero() {
         initial="hidden"
         animate="visible"
       >
-        {/* Decorative Elements */}
         <motion.div
           variants={itemVariants}
-          className="flex items-center justify-center gap-2 mb-12 mt-16 sm:mt-0"
+          className="mb-6 relative"
         >
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-          >
-            <Sparkles className="text-orange-400" size={20} />
-          </motion.div>
-          <span className="text-sm sm:text-base text-gray-400 font-mono tracking-wider uppercase">
-            Available for Work
-          </span>
-          <motion.div
-            animate={{ rotate: -360 }}
-            transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-          >
-            <Sparkles className="text-pink-400" size={20} />
-          </motion.div>
+          {/* Greeting with wave */}
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <motion.span
+              className="text-2xl sm:text-3xl"
+              animate={{
+                rotate: [0, 14, -8, 14, -4, 10, 0],
+                y: [0, -2, 0, -2, 0]
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                repeatDelay: 2,
+                ease: "easeInOut"
+              }}
+            >
+              👋
+            </motion.span>
+            <span className="text-xl sm:text-2xl text-gray-400 font-light tracking-wide">
+              Hey, I&apos;m
+            </span>
+          </div>
+
+          {/* Name with split gradient animation */}
+          <h1 className="relative text-6xl sm:text-8xl lg:text-9xl font-black tracking-tight">
+            <motion.span
+              className="inline-block"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+            >
+              {['M', 'i', 'l', 'a', 'n'].map((letter, index) => (
+                <motion.span
+                  key={index}
+                  className="gradient-text inline-block"
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    delay: 0.5 + index * 0.1,
+                    duration: 0.5,
+                    ease: [0.22, 1, 0.36, 1] as [number, number, number, number]
+                  }}
+                  whileHover={{
+                    scale: 1.1,
+                    rotate: [-2, 2, -2, 0],
+                    transition: { duration: 0.3 }
+                  }}
+                >
+                  {letter}
+                </motion.span>
+              ))}
+            </motion.span>
+
+            {/* Enhanced glow effect */}
+            <motion.span
+              className="absolute inset-0 gradient-text blur-3xl opacity-40 pointer-events-none"
+              animate={{
+                opacity: [0.2, 0.5, 0.2],
+                scale: [1, 1.05, 1]
+              }}
+              transition={{ duration: 4, repeat: Infinity }}
+            >
+              Milan
+            </motion.span>
+          </h1>
         </motion.div>
 
-        <motion.h1
+        {/* Open to work indicator - Moved higher for visibility */}
+        <motion.div
           variants={itemVariants}
-          className="relative text-6xl sm:text-8xl lg:text-9xl font-black mb-6"
+          className="mb-8"
         >
-          <span className="gradient-text inline-block">
-            Milan
-          </span>
-          {/* Glow effect */}
-          <motion.span
-            className="absolute inset-0 gradient-text blur-2xl opacity-50 pointer-events-none"
-            animate={{ opacity: [0.3, 0.6, 0.3] }}
-            transition={{ duration: 3, repeat: Infinity }}
+          <motion.div
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-green-500/10 border border-green-500/30 rounded-full backdrop-blur-sm mb-2"
+            animate={{
+              boxShadow: [
+                '0 0 0 0 rgba(34, 197, 94, 0)',
+                '0 0 0 8px rgba(34, 197, 94, 0.1)',
+                '0 0 0 0 rgba(34, 197, 94, 0)'
+              ]
+            }}
+            transition={{ duration: 2, repeat: Infinity }}
           >
-            Milan
-          </motion.span>
-        </motion.h1>
+            <motion.div
+              className="w-2.5 h-2.5 bg-green-400 rounded-full"
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            />
+            <span className="text-green-400 font-semibold text-sm sm:text-base">
+              Available for Hire
+            </span>
+          </motion.div>
+          <p className="text-xs sm:text-sm text-gray-400">
+            Trusted by startups & enterprises • 7+ years experience
+          </p>
+        </motion.div>
 
         <motion.div
           variants={itemVariants}
@@ -220,40 +281,40 @@ export default function Hero() {
           variants={itemVariants}
           className="mb-8"
         >
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight">
-            Senior Frontend Engineer
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-6 tracking-tight">
+            I Bring Your Digital Dreams to Life ✨
           </h2>
+
+          {/* Engaging description for all audiences */}
+          <p className="text-base sm:text-lg text-gray-300 mb-6 max-w-2xl mx-auto leading-relaxed">
+            From stunning <span className="text-orange-400 font-semibold">websites</span> to powerful{' '}
+            <span className="text-pink-400 font-semibold">web apps</span> and cutting-edge{' '}
+            <span className="text-purple-400 font-semibold">blockchain solutions</span> —
+            I craft digital experiences that wow your users and grow your business.
+          </p>
+
+          {/* What I do - Simple & Clear */}
           <div className="flex items-center justify-center gap-3 flex-wrap">
             <motion.span
               className="px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full text-orange-400 text-sm sm:text-base font-medium backdrop-blur-sm"
               whileHover={{ scale: 1.05, borderColor: 'rgba(249, 115, 22, 0.4)' }}
             >
-              Blockchain Architect
+              💼 Websites & Web Apps
             </motion.span>
             <motion.span
               className="px-4 py-2 bg-pink-500/10 border border-pink-500/20 rounded-full text-pink-400 text-sm sm:text-base font-medium backdrop-blur-sm"
               whileHover={{ scale: 1.05, borderColor: 'rgba(236, 72, 153, 0.4)' }}
             >
-              dApp Specialist
+              🚀 Blockchain & Web3
             </motion.span>
             <motion.span
               className="px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm sm:text-base font-medium backdrop-blur-sm"
               whileHover={{ scale: 1.05, borderColor: 'rgba(139, 92, 246, 0.4)' }}
             >
-              Web3 Expert
+              👥 Team Leadership
             </motion.span>
           </div>
         </motion.div>
-
-        <motion.p
-          variants={itemVariants}
-          className="text-base sm:text-lg lg:text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
-        >
-          Building the decentralized future, one dApp at a time.
-          Creator of <span className="text-orange-400 font-semibold">Phoenix Hub</span>,
-          <span className="text-pink-400 font-semibold"> HackAtom Winner</span>, and
-          <span className="text-purple-400 font-semibold"> experienced team leader</span>.
-        </motion.p>
 
         {/* Social Links */}
         <motion.div
@@ -302,7 +363,7 @@ export default function Hero() {
               transition={{ duration: 0.3 }}
             />
             <span className="relative z-10 flex items-center gap-2">
-              View My Work
+              See What I&apos;ve Built
               <motion.span
                 animate={{ x: [0, 5, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
@@ -317,7 +378,7 @@ export default function Hero() {
             whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(255, 255, 255, 0.1)' }}
             whileTap={{ scale: 0.95 }}
           >
-            Get In Touch
+            Let&apos;s Talk About Your Project
           </motion.a>
         </motion.div>
       </motion.div>

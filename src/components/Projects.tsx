@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
+import Image from "next/image";
 import {
   ExternalLink,
   Github,
@@ -22,7 +23,7 @@ export default function Projects() {
     {
       title: "Phoenix Hub",
       description:
-        "A comprehensive platform for decentralized applications featuring a modern React-based architecture with Material-UI. Complete ecosystem with web and mobile applications.",
+        "Your all-in-one platform for exploring the decentralized web. Built with React and cutting-edge Web3 technology, Phoenix Hub makes blockchain accessible and beautiful. Available on web and mobile.",
       image: "/projects/phoenix-hub.jpg",
       tags: ["React", "TypeScript", "Material-UI", "Web3", "Mobile"],
       links: {
@@ -31,16 +32,16 @@ export default function Projects() {
       },
       stats: {
         icon: Users,
-        label: "Users",
-        value: "10K+",
+        label: "Active",
+        value: "Live",
       },
       featured: true,
-      gradient: "from-blue-500 via-purple-500 to-cyan-500",
+      gradient: "from-orange-500 via-pink-500 to-purple-500",
     },
     {
       title: "CosmJS",
       description:
-        "Active contributor to CosmJS, the Swiss Army knife for JavaScript-based client solutions in the Cosmos ecosystem. Enabling seamless blockchain interactions for developers worldwide.",
+        "Contributing to the powerhouse SDK that connects JavaScript developers to the Cosmos blockchain. My work helps thousands of developers build amazing decentralized apps with ease.",
       image: "/projects/cosmjs.png",
       tags: ["TypeScript", "Blockchain", "SDK", "Open Source", "Cosmos"],
       links: {
@@ -48,15 +49,15 @@ export default function Projects() {
       },
       stats: {
         icon: Code,
-        label: "Contributions",
-        value: "100+",
+        label: "Contributor",
+        value: "Active",
       },
-      gradient: "from-purple-500 via-pink-500 to-purple-500",
+      gradient: "from-pink-500 via-purple-500 to-orange-500",
     },
     {
       title: "CosmWasmJS",
       description:
-        "Original author of CosmWasmJS, the essential SDK for building client applications that interact with CosmWasm-enabled blockchains. Empowering smart contract interactions.",
+        "Created the original CosmWasmJS SDK that powers countless blockchain applications. This toolkit makes it simple for developers to interact with smart contracts on CosmWasm networks.",
       image: "/projects/cosmwasmjs.jpg",
       tags: ["TypeScript", "Smart Contracts", "CosmWasm", "SDK", "Web3"],
       links: {
@@ -64,10 +65,10 @@ export default function Projects() {
       },
       stats: {
         icon: Star,
-        label: "Stars",
-        value: "50+",
+        label: "Author",
+        value: "Original",
       },
-      gradient: "from-green-500 via-emerald-500 to-cyan-500",
+      gradient: "from-purple-500 via-pink-500 to-orange-500",
       archived: true,
     },
   ];
@@ -79,9 +80,9 @@ export default function Projects() {
       ref={ref}
     >
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/5 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-pink-950/5 to-black" />
       <motion.div
-        className="absolute top-1/3 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"
+        className="absolute top-1/3 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl"
         animate={{
           scale: [1, 1.3, 1],
           opacity: [0.3, 0.5, 0.3],
@@ -89,7 +90,7 @@ export default function Projects() {
         transition={{ duration: 10, repeat: Infinity }}
       />
       <motion.div
-        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
+        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
         animate={{
           scale: [1.3, 1, 1.3],
           opacity: [0.5, 0.3, 0.5],
@@ -111,7 +112,7 @@ export default function Projects() {
             transition={{ duration: 0.5, type: "spring" }}
             className="inline-block mb-4"
           >
-            <div className="px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium backdrop-blur-sm">
+            <div className="px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full text-orange-400 text-sm font-medium backdrop-blur-sm">
               My Work
             </div>
           </motion.div>
@@ -124,9 +125,9 @@ export default function Projects() {
             animate={isInView ? { scaleX: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="h-px bg-gradient-to-r from-transparent via-purple-500 to-blue-500 w-24" />
-            <Sparkles className="text-purple-400" size={24} />
-            <div className="h-px bg-gradient-to-r from-blue-500 via-purple-500 to-transparent w-24" />
+            <div className="h-px bg-gradient-to-r from-transparent via-orange-500 to-pink-500 w-24" />
+            <Sparkles className="text-orange-400" size={24} />
+            <div className="h-px bg-gradient-to-r from-pink-500 via-purple-500 to-transparent w-24" />
           </motion.div>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Showcasing my work in blockchain, open source, and cutting-edge web
@@ -171,10 +172,13 @@ export default function Projects() {
                     transition={{ duration: 0.6 }}
                     style={{ left: '-140px', width: 'calc(100% + 140px)' }}
                   >
-                    <img
+                    <Image
                       src={projects[0].image}
                       alt={projects[0].title}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      priority
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent lg:bg-gradient-to-r lg:from-black/90 lg:via-black/60 lg:to-transparent" />
                   </motion.div>
@@ -190,7 +194,7 @@ export default function Projects() {
                       const StatsIcon = projects[0].stats.icon;
                       return (
                         <div className="flex items-center gap-2 px-4 py-2 bg-black/60 backdrop-blur-md border border-white/20 rounded-full">
-                          <StatsIcon size={16} className="text-cyan-400" />
+                          <StatsIcon size={16} className="text-orange-400" />
                           <span className="text-sm font-bold text-white">
                             {projects[0].stats.value}
                           </span>
@@ -225,7 +229,7 @@ export default function Projects() {
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ delay: 0.4 }}
                   >
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-full text-blue-400 text-xs font-medium mb-6">
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-orange-500/10 to-pink-500/10 border border-orange-500/20 rounded-full text-orange-400 text-xs font-medium mb-6">
                       <Sparkles size={12} />
                       <span>Featured Project</span>
                     </div>
@@ -235,7 +239,7 @@ export default function Projects() {
                     initial={{ opacity: 0, x: -30 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ delay: 0.5 }}
-                    className="text-4xl lg:text-5xl font-black mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
+                    className="text-4xl lg:text-5xl font-black mb-4 bg-gradient-to-r from-orange-400 via-pink-400 to-purple-400 bg-clip-text text-transparent"
                   >
                     {projects[0].title}
                   </motion.h3>
@@ -281,12 +285,12 @@ export default function Projects() {
                       href={projects[0].links.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group/btn relative flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold overflow-hidden"
+                      className="group/btn relative flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-600 to-pink-600 rounded-full text-white font-semibold overflow-hidden"
                       whileHover={{ scale: 1.05, y: -2 }}
                       whileTap={{ scale: 0.98 }}
                     >
                       <motion.div
-                        className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600"
+                        className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600"
                         initial={{ x: "-100%" }}
                         whileHover={{ x: "0%" }}
                         transition={{ duration: 0.3 }}
@@ -358,10 +362,12 @@ export default function Projects() {
                     }
                     transition={{ duration: 0.5 }}
                   >
-                    <img
+                    <Image
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-contain"
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </motion.div>
 
@@ -379,7 +385,7 @@ export default function Projects() {
                       const StatsIcon = project.stats.icon;
                       return (
                         <div className="flex items-center gap-2 px-3 py-2 bg-black/60 backdrop-blur-md border border-white/20 rounded-full">
-                          <StatsIcon size={14} className="text-purple-400" />
+                          <StatsIcon size={14} className="text-pink-400" />
                           <span className="text-xs font-bold text-white">
                             {project.stats.value}
                           </span>
@@ -395,7 +401,7 @@ export default function Projects() {
                 {/* Content */}
                 <div className="p-8">
                   <div className="flex items-center gap-3 mb-3">
-                    <h3 className="text-2xl font-bold group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all">
+                    <h3 className="text-2xl font-bold group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-orange-400 group-hover:to-pink-400 transition-all">
                       {project.title}
                     </h3>
                     {project.archived && (

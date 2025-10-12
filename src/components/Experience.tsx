@@ -15,65 +15,65 @@ export default function Experience() {
       title: 'Creator & Lead Developer',
       company: 'Phoenix Hub',
       location: 'Remote',
-      description: 'Leading development of cutting-edge decentralized applications and web platforms. Architecting scalable solutions and managing technical strategy for blockchain projects.',
+      description: 'Building the future of decentralized applications. From concept to execution, I lead the technical vision and development of innovative blockchain solutions that make Web3 accessible to everyone.',
       icon: Briefcase,
       achievements: [
-        'Built comprehensive dApp ecosystem',
-        'Designed scalable architecture',
-        'Led technical strategy and development',
+        'Built comprehensive dApp ecosystem from scratch',
+        'Architected scalable Web3 infrastructure',
+        'Led cross-functional development teams',
       ],
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-orange-500 to-pink-500',
     },
     {
       year: '2021',
       title: 'HackAtom Winner',
       company: 'WYND DAO',
       location: 'Global Competition',
-      description: 'Won HackAtom competition with an innovative DAO solution. Built advanced governance mechanisms and smart contract architecture on CosmWasm.',
+      description: 'Won the prestigious HackAtom competition with an innovative DAO governance solution. Showcased expertise in smart contract development and blockchain architecture on the Cosmos network.',
       icon: Award,
       achievements: [
-        'Award-winning blockchain solution',
-        'Advanced governance mechanisms',
-        'Smart contract innovation',
+        'First place in global blockchain competition',
+        'Built advanced governance mechanisms',
+        'Pioneered CosmWasm smart contract patterns',
       ],
-      color: 'from-yellow-500 to-orange-500',
+      color: 'from-pink-500 to-purple-500',
     },
     {
       year: '2020 - Present',
       title: 'Open Source Contributor',
       company: 'Cosmos Ecosystem',
       location: 'Global',
-      description: 'Active contributor to CosmJS and CosmWasmJS - essential TypeScript libraries for the Cosmos ecosystem. Helping developers worldwide build blockchain applications.',
+      description: 'Original author of CosmWasmJS and active contributor to CosmJS. My work powers countless blockchain applications, making it easier for developers worldwide to build on Cosmos.',
       icon: GitBranch,
       achievements: [
-        'Core contributor to CosmJS',
-        'CosmWasmJS development',
-        'Supporting global developer community',
+        'Created CosmWasmJS SDK from the ground up',
+        'Active contributor to CosmJS core',
+        'Empowering thousands of developers globally',
       ],
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-purple-500 to-orange-500',
     },
     {
       year: '2019 - Present',
       title: 'Senior Frontend Engineer',
-      company: 'Various Projects',
-      location: 'Worldwide',
-      description: 'Delivered 50+ successful projects ranging from enterprise web applications to mobile apps. Specialized in React, Vue.js, and modern web technologies.',
+      company: 'Freelance & Consulting',
+      location: 'Remote - Worldwide',
+      description: 'Crafting beautiful, high-performance web applications for startups and enterprises. Specializing in React, Vue.js, and modern JavaScript frameworks to deliver exceptional user experiences.',
       icon: Code,
       achievements: [
-        '50+ successful projects delivered',
-        'Enterprise-level applications',
-        'Modern web technology expertise',
+        'Built enterprise web applications and mobile apps',
+        'Led technical architecture and development',
+        'Delivered solutions across diverse industries',
       ],
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-orange-500 to-pink-500',
     },
   ];
 
   return (
     <section id="experience" className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden" ref={ref}>
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/5 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-orange-950/5 to-black" />
       <motion.div
-        className="absolute top-1/4 left-1/3 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"
+        className="absolute top-1/4 left-1/3 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.3, 0.5, 0.3],
@@ -95,7 +95,7 @@ export default function Experience() {
             transition={{ duration: 0.5, type: 'spring' }}
             className="inline-block mb-4"
           >
-            <div className="px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium backdrop-blur-sm">
+            <div className="px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full text-orange-400 text-sm font-medium backdrop-blur-sm">
               My Journey
             </div>
           </motion.div>
@@ -108,9 +108,9 @@ export default function Experience() {
             animate={isInView ? { scaleX: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="h-px bg-gradient-to-r from-transparent via-purple-500 to-blue-500 w-24" />
-            <Sparkles className="text-purple-400" size={24} />
-            <div className="h-px bg-gradient-to-r from-blue-500 via-purple-500 to-transparent w-24" />
+            <div className="h-px bg-gradient-to-r from-transparent via-orange-500 to-pink-500 w-24" />
+            <Sparkles className="text-orange-400" size={24} />
+            <div className="h-px bg-gradient-to-r from-pink-500 via-purple-500 to-transparent w-24" />
           </motion.div>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Building innovative solutions and contributing to the blockchain ecosystem
@@ -122,7 +122,7 @@ export default function Experience() {
           {/* Vertical Line */}
           <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 -translate-x-1/2">
             <motion.div
-              className="w-full bg-gradient-to-b from-blue-500 via-purple-500 to-cyan-500"
+              className="w-full bg-gradient-to-b from-orange-500 via-pink-500 to-purple-500"
               initial={{ height: 0 }}
               animate={isInView ? { height: '100%' } : {}}
               transition={{ duration: 1.5, ease: 'easeInOut' }}
@@ -169,10 +169,10 @@ export default function Experience() {
                       </div>
 
                       {/* Title & Company */}
-                      <h3 className="text-2xl font-bold mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all">
+                      <h3 className="text-2xl font-bold mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-orange-400 group-hover:to-pink-400 transition-all">
                         {item.title}
                       </h3>
-                      <div className="flex items-center gap-2 text-lg text-purple-400 font-semibold mb-2">
+                      <div className="flex items-center gap-2 text-lg text-orange-400 font-semibold mb-2">
                         {item.company}
                       </div>
                       <div className="flex items-center gap-2 text-sm text-gray-400 mb-4">
@@ -223,7 +223,7 @@ export default function Experience() {
 
                 {/* Center Timeline Dot */}
                 <motion.div
-                  className="hidden md:block absolute left-1/2 -translate-x-1/2 z-10"
+                  className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
                   initial={{ scale: 0 }}
                   animate={isInView ? { scale: 1 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.2 + 0.5 }}

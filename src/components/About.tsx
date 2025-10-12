@@ -21,38 +21,37 @@ export default function About() {
     {
       icon: Code2,
       label: "Years Experience",
-      value: "5+",
-      color: "from-blue-500 to-cyan-500",
+      value: "7+",
+      color: "from-orange-500 to-pink-500",
       description: "Building exceptional web experiences",
     },
     {
       icon: Briefcase,
-      label: "Teams Led",
-      value: "10+",
-      color: "from-purple-500 to-pink-500",
-      description: "Managing cross-functional development teams",
+      label: "Projects Delivered",
+      value: "20+",
+      color: "from-pink-500 to-purple-500",
+      description: "From concept to production",
     },
     {
       icon: Globe,
       label: "Open Source",
       value: "Active",
-      color: "from-green-500 to-emerald-500",
-      description: "Contributing to Cosmos ecosystem",
+      color: "from-purple-500 to-orange-500",
+      description: "Author of CosmWasmJS & Cosmos contributor",
     },
     {
       icon: Award,
       label: "HackAtom",
       value: "Winner",
-      color: "from-yellow-500 to-orange-500",
+      color: "from-orange-500 to-pink-500",
       description: "Award-winning blockchain solutions",
     },
   ];
 
   const highlights = [
-    { icon: Zap, text: "React & Vue.js Expert", color: "text-blue-400" },
-    { icon: Rocket, text: "Blockchain Specialist", color: "text-purple-400" },
-    { icon: Sparkles, text: "Web3 Pioneer", color: "text-cyan-400" },
-    { icon: Briefcase, text: "Team Leader", color: "text-orange-400" },
+    { icon: Zap, text: "React & Vue.js Expert", color: "text-orange-400" },
+    { icon: Rocket, text: "Blockchain Specialist", color: "text-pink-400" },
+    { icon: Sparkles, text: "Web3 Pioneer", color: "text-purple-400" },
   ];
 
   return (
@@ -62,9 +61,9 @@ export default function About() {
       ref={ref}
     >
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-blue-950/10 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-orange-950/10 to-black" />
       <motion.div
-        className="absolute top-1/4 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
+        className="absolute top-1/4 right-0 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl"
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.3, 0.5, 0.3],
@@ -72,7 +71,7 @@ export default function About() {
         transition={{ duration: 8, repeat: Infinity }}
       />
       <motion.div
-        className="absolute bottom-1/4 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"
+        className="absolute bottom-1/4 left-0 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
         animate={{
           scale: [1.2, 1, 1.2],
           opacity: [0.5, 0.3, 0.5],
@@ -94,7 +93,7 @@ export default function About() {
             transition={{ duration: 0.5, type: "spring" }}
             className="inline-block mb-4"
           >
-            <div className="px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium backdrop-blur-sm">
+            <div className="px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full text-orange-400 text-sm font-medium backdrop-blur-sm">
               Get to know me
             </div>
           </motion.div>
@@ -107,9 +106,9 @@ export default function About() {
             animate={isInView ? { scaleX: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="h-px bg-gradient-to-r from-transparent via-blue-500 to-purple-500 w-24" />
-            <Sparkles className="text-blue-400" size={24} />
-            <div className="h-px bg-gradient-to-r from-purple-500 via-blue-500 to-transparent w-24" />
+            <div className="h-px bg-gradient-to-r from-transparent via-orange-500 to-pink-500 w-24" />
+            <Sparkles className="text-orange-400" size={24} />
+            <div className="h-px bg-gradient-to-r from-pink-500 via-purple-500 to-transparent w-24" />
           </motion.div>
         </motion.div>
 
@@ -149,16 +148,15 @@ export default function About() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                className="relative pl-6 border-l-2 border-blue-500/50"
+                className="relative pl-6 border-l-2 border-orange-500/50"
               >
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  I&apos;m a{" "}
-                  <span className="text-blue-400 font-bold">
-                    Senior Frontend Engineer
-                  </span>{" "}
-                  with a passion for building innovative decentralized
-                  applications that push the boundaries of what&apos;s possible
-                  with blockchain technology.
+                  I turn complex ideas into beautiful, functional digital products. Whether it&apos;s a sleek{" "}
+                  <span className="text-orange-400 font-bold">
+                    corporate website
+                  </span>, a powerful{" "}
+                  <span className="text-pink-400 font-bold">web application</span>, or a groundbreaking{" "}
+                  <span className="text-purple-400 font-bold">blockchain solution</span> — I&apos;ve got you covered.
                 </p>
               </motion.div>
 
@@ -166,18 +164,18 @@ export default function About() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className="relative pl-6 border-l-2 border-purple-500/50"
+                className="relative pl-6 border-l-2 border-pink-500/50"
               >
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  As creator of{" "}
-                  <span className="text-purple-400 font-bold">Phoenix Hub</span>
-                  , I lead development teams in creating cutting-edge dApps and
-                  web applications. With extensive experience in{" "}
+                  Beyond just writing code, I{" "}
                   <span className="text-orange-400 font-bold">
-                    team leadership and project management
-                  </span>
-                  , I{"'"}ve successfully guided cross-functional teams through
-                  complex blockchain implementations.
+                    lead teams and manage projects
+                  </span>{" "}
+                  from concept to launch. As the creator of{" "}
+                  <span className="text-pink-400 font-bold">Phoenix Hub</span> and a{" "}
+                  <span className="text-purple-400 font-bold">
+                    HackAtom Winner
+                  </span>, I know what it takes to deliver exceptional results.
                 </p>
               </motion.div>
 
@@ -185,19 +183,14 @@ export default function About() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.7 }}
-                className="relative pl-6 border-l-2 border-cyan-500/50"
+                className="relative pl-6 border-l-2 border-purple-500/50"
               >
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  I&apos;m a proud{" "}
-                  <span className="text-cyan-400 font-bold">
-                    HackAtom Winner
+                  I&apos;m also the{" "}
+                  <span className="text-orange-400 font-bold">
+                    original author of CosmWasmJS
                   </span>{" "}
-                  with WYND DAO and an active contributor to the Cosmos
-                  ecosystem, particularly{" "}
-                  <span className="font-bold text-white">CosmJS</span> and{" "}
-                  <span className="font-bold text-white">CosmWasmJS</span> - the
-                  essential tools that power JavaScript interactions with
-                  Cosmos-based blockchains.
+                  and an active contributor to the Cosmos ecosystem. My work powers countless blockchain applications, making Web3 more accessible to developers worldwide.
                 </p>
               </motion.div>
 
@@ -205,14 +198,36 @@ export default function About() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.8 }}
-                className="p-6 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-cyan-500/10 border border-white/10 rounded-2xl backdrop-blur-sm"
+                className="relative p-8 bg-gradient-to-br from-orange-500/10 via-pink-500/10 to-purple-500/10 border-2 border-orange-500/20 rounded-2xl backdrop-blur-sm overflow-hidden group hover:border-orange-500/40 transition-all"
               >
-                <p className="text-lg text-gray-200 leading-relaxed italic">
-                  &ldquo;I believe in leveraging the power of decentralized
-                  technologies to build secure, scalable, and user-friendly
-                  applications that make blockchain accessible to
-                  everyone.&rdquo;
+                <motion.div
+                  className="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl"
+                  animate={{
+                    scale: [1, 1.2, 1],
+                    opacity: [0.3, 0.6, 0.3],
+                  }}
+                  transition={{ duration: 3, repeat: Infinity }}
+                />
+                <p className="text-xl text-white leading-relaxed font-semibold relative z-10">
+                  Ready to bring your vision to life?
                 </p>
+                <p className="text-base text-gray-300 mt-2 relative z-10">
+                  Let&apos;s build something amazing together. From small businesses to enterprise solutions — I&apos;m here to help.
+                </p>
+                <motion.a
+                  href="#contact"
+                  className="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-gradient-to-r from-orange-600 to-pink-600 rounded-full text-white font-bold relative z-10"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Start Your Project
+                  <motion.span
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    →
+                  </motion.span>
+                </motion.a>
               </motion.div>
             </div>
           </motion.div>

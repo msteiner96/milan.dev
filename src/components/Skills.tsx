@@ -29,60 +29,43 @@ export default function Skills() {
 
   const skillGroups = [
     {
-      category: 'Frontend Mastery',
-      gradient: 'from-blue-500 via-cyan-500 to-blue-600',
+      category: 'Frontend Development',
+      gradient: 'from-orange-500 via-pink-500 to-orange-600',
       skills: [
-        { name: 'React', level: 'Expert', emoji: '⚛️', color: 'blue' },
-        { name: 'Next.js', level: 'Expert', emoji: '▲', color: 'cyan' },
-        { name: 'Vue.js', level: 'Advanced', emoji: '💚', color: 'green' },
-        { name: 'TypeScript', level: 'Expert', emoji: '📘', color: 'blue' },
-        { name: 'Tailwind CSS', level: 'Expert', emoji: '🎨', color: 'cyan' },
-        { name: 'Framer Motion', level: 'Advanced', emoji: '✨', color: 'purple' },
+        { name: 'React', level: 'Expert', emoji: '⚛️' },
+        { name: 'Next.js', level: 'Expert', emoji: '▲' },
+        { name: 'Vue.js', level: 'Advanced', emoji: '💚' },
+        { name: 'TypeScript', level: 'Expert', emoji: '📘' },
+        { name: 'Tailwind CSS', level: 'Expert', emoji: '🎨' },
+        { name: 'Framer Motion', level: 'Advanced', emoji: '✨' },
+        { name: 'React Native', level: 'Expert', emoji: '📱' },
+        { name: 'Responsive Design', level: 'Expert', emoji: '📐' },
       ],
     },
     {
       category: 'Blockchain & Web3',
-      gradient: 'from-purple-500 via-pink-500 to-purple-600',
+      gradient: 'from-pink-500 via-purple-500 to-pink-600',
       skills: [
-        { name: 'CosmWasm', level: 'Expert', emoji: '🌌', color: 'purple' },
-        { name: 'CosmJS', level: 'Expert', emoji: '🚀', color: 'blue' },
-        { name: 'Soroban', level: 'Advanced', emoji: '⭐', color: 'yellow' },
-        { name: 'Solidity', level: 'Advanced', emoji: '💎', color: 'purple' },
-        { name: 'Web3.js', level: 'Advanced', emoji: '🔗', color: 'orange' },
-        { name: 'Smart Contracts', level: 'Expert', emoji: '📜', color: 'pink' },
+        { name: 'CosmWasm', level: 'Expert', emoji: '🌌' },
+        { name: 'CosmJS', level: 'Expert', emoji: '🚀' },
+        { name: 'Smart Contracts', level: 'Expert', emoji: '📜' },
+        { name: 'Soroban', level: 'Advanced', emoji: '⭐' },
+        { name: 'Solidity', level: 'Advanced', emoji: '💎' },
+        { name: 'Web3.js', level: 'Advanced', emoji: '🔗' },
       ],
     },
     {
-      category: 'Backend & Infrastructure',
-      gradient: 'from-green-500 via-emerald-500 to-green-600',
+      category: 'Backend & DevOps',
+      gradient: 'from-purple-500 via-orange-500 to-purple-600',
       skills: [
-        { name: 'Node.js', level: 'Expert', emoji: '🟢', color: 'green' },
-        { name: 'Express', level: 'Expert', emoji: '🚂', color: 'gray' },
-        { name: 'GraphQL', level: 'Advanced', emoji: '◼️', color: 'pink' },
-        { name: 'REST APIs', level: 'Expert', emoji: '🔌', color: 'blue' },
-        { name: 'PostgreSQL', level: 'Advanced', emoji: '🐘', color: 'blue' },
-        { name: 'MongoDB', level: 'Advanced', emoji: '🍃', color: 'green' },
-      ],
-    },
-    {
-      category: 'Mobile & Cross-Platform',
-      gradient: 'from-orange-500 via-red-500 to-orange-600',
-      skills: [
-        { name: 'React Native', level: 'Expert', emoji: '📱', color: 'blue' },
-        { name: 'Responsive Design', level: 'Expert', emoji: '📐', color: 'purple' },
-        { name: 'PWA', level: 'Advanced', emoji: '⚡', color: 'yellow' },
-        { name: 'Mobile-First', level: 'Expert', emoji: '🎯', color: 'red' },
-      ],
-    },
-    {
-      category: 'DevOps & Tools',
-      gradient: 'from-indigo-500 via-purple-500 to-indigo-600',
-      skills: [
-        { name: 'Git', level: 'Expert', emoji: '🔀', color: 'orange' },
-        { name: 'Docker', level: 'Advanced', emoji: '🐳', color: 'blue' },
-        { name: 'CI/CD', level: 'Advanced', emoji: '🔄', color: 'green' },
-        { name: 'Testing', level: 'Advanced', emoji: '✅', color: 'green' },
-        { name: 'Redis', level: 'Advanced', emoji: '🔴', color: 'red' },
+        { name: 'Node.js', level: 'Expert', emoji: '🟢' },
+        { name: 'Express', level: 'Expert', emoji: '🚂' },
+        { name: 'GraphQL', level: 'Advanced', emoji: '◼️' },
+        { name: 'REST APIs', level: 'Expert', emoji: '🔌' },
+        { name: 'PostgreSQL', level: 'Advanced', emoji: '🐘' },
+        { name: 'MongoDB', level: 'Advanced', emoji: '🍃' },
+        { name: 'Docker', level: 'Advanced', emoji: '🐳' },
+        { name: 'Git', level: 'Expert', emoji: '🔀' },
       ],
     },
   ];
@@ -90,9 +73,9 @@ export default function Skills() {
   return (
     <section id="skills" className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden" ref={ref}>
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-green-950/5 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/5 to-black" />
       <motion.div
-        className="absolute top-1/3 right-1/4 w-96 h-96 bg-green-500/10 rounded-full blur-3xl"
+        className="absolute top-1/3 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
         animate={{
           scale: [1, 1.3, 1],
           opacity: [0.3, 0.5, 0.3],
@@ -100,7 +83,7 @@ export default function Skills() {
         transition={{ duration: 10, repeat: Infinity }}
       />
       <motion.div
-        className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"
+        className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl"
         animate={{
           scale: [1.3, 1, 1.3],
           opacity: [0.5, 0.3, 0.5],
@@ -122,7 +105,7 @@ export default function Skills() {
             transition={{ duration: 0.5, type: 'spring' }}
             className="inline-block mb-4"
           >
-            <div className="px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-sm font-medium backdrop-blur-sm">
+            <div className="px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full text-orange-400 text-sm font-medium backdrop-blur-sm">
               My Expertise
             </div>
           </motion.div>
@@ -135,9 +118,9 @@ export default function Skills() {
             animate={isInView ? { scaleX: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="h-px bg-gradient-to-r from-transparent via-green-500 to-blue-500 w-24" />
-            <Sparkles className="text-green-400" size={24} />
-            <div className="h-px bg-gradient-to-r from-blue-500 via-green-500 to-transparent w-24" />
+            <div className="h-px bg-gradient-to-r from-transparent via-orange-500 to-pink-500 w-24" />
+            <Sparkles className="text-orange-400" size={24} />
+            <div className="h-px bg-gradient-to-r from-pink-500 via-purple-500 to-transparent w-24" />
           </motion.div>
 
           {/* Animated Skill Display */}
@@ -279,10 +262,10 @@ export default function Skills() {
               whileHover={{ scale: 1.05, y: -5 }}
               className="group relative"
             >
-              <div className="relative bg-gradient-to-br from-blue-500/10 via-cyan-500/10 to-blue-500/10 border border-blue-500/20 rounded-3xl p-8 backdrop-blur-sm hover:border-blue-500/40 transition-all overflow-hidden">
+              <div className="relative bg-gradient-to-br from-orange-500/10 via-pink-500/10 to-orange-500/10 border border-orange-500/20 rounded-3xl p-8 backdrop-blur-sm hover:border-orange-500/40 transition-all overflow-hidden">
                 {/* Animated background */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity"
                   animate={{
                     backgroundPosition: ['0% 0%', '100% 100%'],
                   }}
@@ -301,17 +284,17 @@ export default function Skills() {
                 {/* Number */}
                 <div className="relative text-center">
                   <motion.div
-                    className="text-5xl font-black bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2"
+                    className="text-5xl font-black bg-gradient-to-r from-orange-400 to-pink-400 bg-clip-text text-transparent mb-2"
                     whileHover={{ scale: 1.1 }}
                   >
-                    27+
+                    25+
                   </motion.div>
                   <div className="text-sm font-semibold text-gray-300 uppercase tracking-wider">Technologies</div>
                   <div className="text-xs text-gray-500 mt-1">Mastered & Growing</div>
                 </div>
 
                 {/* Corner decoration */}
-                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-500/20 to-transparent rounded-full blur-2xl" />
+                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-orange-500/20 to-transparent rounded-full blur-2xl" />
               </div>
             </motion.div>
 
@@ -323,10 +306,10 @@ export default function Skills() {
               whileHover={{ scale: 1.05, y: -5 }}
               className="group relative"
             >
-              <div className="relative bg-gradient-to-br from-purple-500/10 via-pink-500/10 to-purple-500/10 border border-purple-500/20 rounded-3xl p-8 backdrop-blur-sm hover:border-purple-500/40 transition-all overflow-hidden">
+              <div className="relative bg-gradient-to-br from-pink-500/10 via-purple-500/10 to-pink-500/10 border border-pink-500/20 rounded-3xl p-8 backdrop-blur-sm hover:border-pink-500/40 transition-all overflow-hidden">
                 {/* Animated background */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity"
                   animate={{
                     backgroundPosition: ['0% 0%', '100% 100%'],
                   }}
@@ -345,17 +328,17 @@ export default function Skills() {
                 {/* Number */}
                 <div className="relative text-center">
                   <motion.div
-                    className="text-5xl font-black bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2"
+                    className="text-5xl font-black bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent mb-2"
                     whileHover={{ scale: 1.1 }}
                   >
-                    5+
+                    7+
                   </motion.div>
                   <div className="text-sm font-semibold text-gray-300 uppercase tracking-wider">Years</div>
                   <div className="text-xs text-gray-500 mt-1">Professional Experience</div>
                 </div>
 
                 {/* Corner decoration */}
-                <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-purple-500/20 to-transparent rounded-full blur-2xl" />
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-pink-500/20 to-transparent rounded-full blur-2xl" />
               </div>
             </motion.div>
 
@@ -367,10 +350,10 @@ export default function Skills() {
               whileHover={{ scale: 1.05, y: -5 }}
               className="group relative"
             >
-              <div className="relative bg-gradient-to-br from-green-500/10 via-emerald-500/10 to-green-500/10 border border-green-500/20 rounded-3xl p-8 backdrop-blur-sm hover:border-green-500/40 transition-all overflow-hidden">
+              <div className="relative bg-gradient-to-br from-purple-500/10 via-orange-500/10 to-purple-500/10 border border-purple-500/20 rounded-3xl p-8 backdrop-blur-sm hover:border-purple-500/40 transition-all overflow-hidden">
                 {/* Animated background */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity"
                   animate={{
                     backgroundPosition: ['0% 0%', '100% 100%'],
                   }}
@@ -389,7 +372,7 @@ export default function Skills() {
                 {/* Number */}
                 <div className="relative text-center">
                   <motion.div
-                    className="text-5xl font-black bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2"
+                    className="text-5xl font-black bg-gradient-to-r from-purple-400 to-orange-400 bg-clip-text text-transparent mb-2"
                     whileHover={{ scale: 1.1 }}
                     animate={{ opacity: [1, 0.7, 1] }}
                     transition={{ duration: 2, repeat: Infinity }}
@@ -401,22 +384,10 @@ export default function Skills() {
                 </div>
 
                 {/* Corner decoration */}
-                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-green-500/20 to-transparent rounded-full blur-2xl" />
+                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-purple-500/20 to-transparent rounded-full blur-2xl" />
               </div>
             </motion.div>
           </div>
-
-          {/* Optional Quote/Tagline */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 1.6 }}
-            className="mt-12 text-center"
-          >
-            <p className="text-lg text-gray-400 italic">
-              &ldquo;Constantly evolving with the tech landscape&rdquo;
-            </p>
-          </motion.div>
         </motion.div>
       </div>
     </section>
