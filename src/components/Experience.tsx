@@ -25,6 +25,20 @@ export default function Experience() {
       color: 'from-orange-500 to-pink-500',
     },
     {
+      year: '2025',
+      title: 'Hackmos 2025 Winner',
+      company: 'Cosmos Hackathon',
+      location: 'Croatia',
+      description: 'Won the Hackmos 2025 Croatia competition, demonstrating cutting-edge blockchain development skills and innovative solutions in the Cosmos ecosystem.',
+      icon: Award,
+      achievements: [
+        'First place in Croatian blockchain competition',
+        'Showcased advanced Cosmos development expertise',
+        'Delivered innovative blockchain solution under pressure',
+      ],
+      color: 'from-purple-500 to-orange-500',
+    },
+    {
       year: '2021',
       title: 'HackAtom Winner',
       company: 'WYND DAO',

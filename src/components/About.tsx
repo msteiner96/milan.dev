@@ -41,10 +41,10 @@ export default function About() {
     },
     {
       icon: Award,
-      label: "HackAtom",
-      value: "Winner",
+      label: "Hackathon Wins",
+      value: "2x",
       color: "from-orange-500 to-pink-500",
-      description: "Award-winning blockchain solutions",
+      description: "Hackmos 2025 Croatia & HackAtom winner",
     },
   ];
 
@@ -174,8 +174,9 @@ export default function About() {
                   from concept to launch. As the creator of{" "}
                   <span className="text-pink-400 font-bold">Phoenix Hub</span> and a{" "}
                   <span className="text-purple-400 font-bold">
-                    HackAtom Winner
-                  </span>, I know what it takes to deliver exceptional results.
+                    2x hackathon winner
+                  </span>{" "}
+                  (Hackmos 2025 Croatia & HackAtom), I know what it takes to deliver exceptional results.
                 </p>
               </motion.div>
 
